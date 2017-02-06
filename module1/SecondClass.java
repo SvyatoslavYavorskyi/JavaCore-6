@@ -1,3 +1,5 @@
+package module1;
+
 /**
  * Created by Свят on 29.01.2017.
  */
