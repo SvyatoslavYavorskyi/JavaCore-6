@@ -6,6 +6,7 @@ package module2;
 public class DZ1 {
     public static void main(String[] args) {
         int[] numbers = {23, 18, 34, 45, 32, 7, 11, 27, 61, 5};
+
         int sum = summOF(numbers);
         System.out.println("summa = " + sum);
 
@@ -36,10 +37,12 @@ public class DZ1 {
         int highest = numbers[0];
         int secondLargest = numbers[0];
         for (int i = 0; i < numbers.length; i++) {
-           if (numbers[i] > highest)
-                highest = numbers[i];
+           if (highest < numbers[i]) {
+               secondLargest = highest;
+               highest = numbers[i];
+           }
 
-           else if (numbers[i]> secondLargest)
+           if (secondLargest < numbers[i] && highest != numbers[i])
                secondLargest = numbers[i];
 
         }
@@ -50,11 +53,12 @@ public class DZ1 {
 
     private static int moulOf(int[] numbers) {
         int modul = numbers[0];
-        for (int i = 0; i < numbers.length; i++) {
-            modul = modul % numbers[i];
+        for (int i = 0; i <numbers.length ; i++) {
+            int firstNumberOfArray = numbers[0];
+            int lastNumberOfArray = numbers [i] -1 ;
+            modul = firstNumberOfArray % lastNumberOfArray;
 
         }
-
 
         return modul;
     }
@@ -64,6 +68,7 @@ public class DZ1 {
 
         int MulTiplicaTion = 1;
         for (int i = 0; i < numbers.length; i++) {
+
             MulTiplicaTion *= numbers[i];
         }
 
