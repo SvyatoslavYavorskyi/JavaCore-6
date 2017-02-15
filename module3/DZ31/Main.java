@@ -5,16 +5,14 @@ package module3.DZ31;
  */
 public class Main {
     public static void main(String[] args) {
-        Bird bird1= new Bird("I am walking");
-        Bird bird2 =new Bird("I am flying");
-        Bird bird3 = new Bird("I am singing");
-        Bird bird4 = new Bird("I am Bird");
+
+        Bird sparrow = new Bird();
 
 
-        System.out.println(bird1.sing);
-        System.out.println(bird2.sing);
-        System.out.println(bird3.sing);
-        System.out.println(bird4.sing);
+        sparrow.sing("I am walking");
+        sparrow.sing("I am flying");
+        sparrow.sing("I am singing");
+        sparrow.sing("I am Bird");
     }
 
 
