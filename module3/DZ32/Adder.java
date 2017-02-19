@@ -10,8 +10,6 @@ public class Adder extends Arithmetik {
         if (a>=b){
             return true;
         }
-        if (a<b);
-
         return false;
     }
 
