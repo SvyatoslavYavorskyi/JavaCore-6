@@ -5,12 +5,10 @@ package module3.DZ32;
  */
 public class Arithmetik {
 
-    private Integer sum;
+   public int add(Integer a, Integer b){
+       int sum =0;
+       sum=a+b;
 
-    void add (Integer a, Integer b){
-        int sum =a+b;
-        System.out.println(sum);;
-
-    }
-
+       return sum;
+   }
 }

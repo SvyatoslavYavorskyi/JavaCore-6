@@ -7,7 +7,8 @@ public class main1 {
 
     public static void main(String[] args) {
         Adder sum1  = new Adder();
-        sum1.add(34,56);
-        sum1.check(65,56);
+
+        System.out.println(sum1.add(45,56));
+        System.out.println(sum1.check(70,56));
 }
 }
