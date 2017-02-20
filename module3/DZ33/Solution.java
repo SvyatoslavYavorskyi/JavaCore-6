@@ -11,13 +11,15 @@ public class Solution {
     Course course3 = new Course("PHP", 40, "Anna");
     Course course4 = new Course(15 / 2 / 17, "Symfony");
     Course course5 = new Course(23 / 2 / 17, "Symfony");
+    Course[] coursesTaken ={course1,course2,course3,course4,course5};
+
     CollegeStudent collegeStudent1 = new CollegeStudent("Fedya", "Lovley", 1, "kpi", 85, 34);
-    CollegeStudent collegeStudent2 = new CollegeStudent("Anton", new int[]{2}, "Oliyarnik", 2, 68);
-    CollegeStudent collegeStudent3 = new CollegeStudent("Katya", new int[]{1});
+    CollegeStudent collegeStudent2 = new CollegeStudent("Anton", course2, "Oliyarnik", 2, 68);
+    CollegeStudent collegeStudent3 = new CollegeStudent("Katya", course1 );
     SpecialStudent specialStudent1 = new SpecialStudent("Vita", "Filiptchuk", 4, "hpi", 6, 90);
     SpecialStudent specialStudent2 = new SpecialStudent("lena", "kitchenko", 2, "hpi", 4, 86, 568448);
-    SpecialStudent specialStudent3 = new SpecialStudent("Petro", new int[]{1}, "kpi", 7, 77);
+    SpecialStudent specialStudent3 = new SpecialStudent("Petro", course3, "kpi", 7, 77);
     Student student1 = new Student("Alina", "Yoga", 5);
-    Student student2 = new Student("Albina", new int[]{2});
+    Student student2 = new Student("Albina", course1);
 
 }
