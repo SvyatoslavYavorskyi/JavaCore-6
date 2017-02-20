@@ -4,7 +4,7 @@ package module3.DZ33;
  * Created by Свят on 19.02.2017.
  */
 public class CollegeStudent extends Student {
-   private String collegeName;
+    private String collegeName;
     private int rating;
     private long id;
 
@@ -33,11 +33,12 @@ public class CollegeStudent extends Student {
     }
 
 
-    public CollegeStudent(String firstName, int coursesTaken, String lastName, int group, long id) {
+
+    public CollegeStudent(String firstName, int[] coursesTaken, String lastName, int group, long id) {
         super(firstName, lastName, group);
     }
 
-    public CollegeStudent(String lastName, int coursesTaken) {
+    public CollegeStudent(String lastName, int[] coursesTaken) {
         super(lastName, coursesTaken);
     }
 

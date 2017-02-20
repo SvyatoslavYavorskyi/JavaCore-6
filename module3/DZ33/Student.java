@@ -8,9 +8,12 @@ public class Student {
     private String firstName;
     private String lastName;
     private int group;
-    private int coursesTaken;
+    private int[] coursesTaken;
     private int age;
-   int[] Course = new int[]{1, 2, 3, 4, 5};
+
+
+
+
 
     public String getFirstName() {
         return firstName;
@@ -36,11 +39,11 @@ public class Student {
         this.group = group;
     }
 
-    public int getCoursesTaken() {
+    public int[] getCoursesTaken() {
         return coursesTaken;
     }
 
-    public void setCoursesTaken(int coursesTaken) {
+    public void setCoursesTaken(int[] coursesTaken) {
         this.coursesTaken = coursesTaken;
     }
 
@@ -58,7 +61,7 @@ public class Student {
         this.group = group;
     }
 
-    public Student(String lastName, int coursesTaken) {
+    public Student(String lastName, int[] coursesTaken) {
         this.lastName = lastName;
         this.coursesTaken = coursesTaken;
     }
