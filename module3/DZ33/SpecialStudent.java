@@ -27,8 +27,8 @@ public class SpecialStudent extends CollegeStudent {
         super(firstName, lastName, group, collegeName, rating, id);
     }
 
-    public SpecialStudent(String lastName, Course coursesTaken, String collegeName, int rating, long id) {
-        super(lastName, coursesTaken, collegeName, rating, id);
+    public SpecialStudent(String lastName, Course[] coursesTaken) {
+        super(lastName, coursesTaken);
     }
 
     public SpecialStudent(String firstName, String lastName, int group, String collegeName, int rating, long id, long secretKey) {

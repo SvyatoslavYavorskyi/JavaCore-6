@@ -34,11 +34,11 @@ public class CollegeStudent extends Student {
 
 
 
-    public CollegeStudent(String firstName, Course coursesTaken, String lastName, int group, long id) {
+    public CollegeStudent(String firstName, String lastName, int group) {
         super(firstName, lastName, group);
     }
 
-    public CollegeStudent(String lastName, Course coursesTaken) {
+    public CollegeStudent(String lastName, Course[] coursesTaken) {
         super(lastName, coursesTaken);
     }
 

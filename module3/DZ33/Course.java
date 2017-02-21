@@ -11,6 +11,9 @@ public class Course {
     private int hoursDuration;
     private String teacherName;
 
+
+
+
     public int getStartDate() {
         return startDate;
     }
