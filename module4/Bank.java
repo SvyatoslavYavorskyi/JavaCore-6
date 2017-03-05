@@ -1,14 +1,12 @@
 package module4;
 
-import java.util.Currency;
-
 /**
  * Created by Свят on 19.02.2017.
  */
- public abstract class Bank {
+public abstract class Bank {
     private long id;
-   private String bankCountry;
-   private Currency currency;
+    private String bankCountry;
+    private Currency currency;
     private int numberOfEmployee;
     private double avrSalaryOfEmployee;
     private long rating;
@@ -79,7 +77,6 @@ import java.util.Currency;
     public void setTotalCapital(long totalCapital) {
         this.totalCapital = totalCapital;
     }
-
 
 
     abstract int getLimitOfWithdrawal();
