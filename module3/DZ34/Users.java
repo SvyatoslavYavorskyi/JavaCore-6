@@ -71,17 +71,19 @@ public class Users {
 
     void withdraw (int summ){
         if (summ<1000){
-        balance= (int) (balance*0.05);
+        balance=balance -((int) (summ*1.05));
         }
         if (summ>=1000){
-            balance=(int) (balance*0.1);
+            balance=balance-((int) (summ*1.1));
         }
+
 
     }
 
-    void companyNameLenght (String companyName){
+    public int companyNameLenght(){
         int companyNameLenght = companyName.length();
 
+        return companyNameLenght;
     }
 
     void monthlncreaser (int addMonth){
