@@ -28,7 +28,7 @@ public class USBank extends Bank {
         if (equals(Currency.EUR)) {
             return 10000;
         }
-        return getLimitOfFunding();
+        return 0;
     }
 
     @Override

@@ -3,7 +3,7 @@ package module4;
 /**
  * Created by Свят on 05.03.2017.
  */
-public abstract class ChinaBank extends Bank {
+public  class ChinaBank extends Bank {
     public ChinaBank(long id, String bankCountry, module4.Currency currency, int numberOfEmployee, double avrSalaryOfEmployee, long rating, long totalCapital) {
         super(id, bankCountry, currency, numberOfEmployee, avrSalaryOfEmployee, rating, totalCapital);
     }
