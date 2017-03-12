@@ -12,6 +12,19 @@ public class User {
     private int salary;
     private Bank bank;
 
+    @Override
+    public String toString() {
+        return "User{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", balance=" + balance +
+                ", monthOfEmployment=" + monthOfEmployment +
+                ", companyName='" + companyName + '\'' +
+                ", salary=" + salary +
+                ", bank=" + bank +
+                '}';
+    }
+
     public User(long id, String name, double balance, int monthOfEmployment, String companyName, int salary, Bank bank) {
         this.id = id;
         this.name = name;

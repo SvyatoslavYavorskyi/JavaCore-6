@@ -48,7 +48,7 @@ public  class ChinaBank extends Bank {
     }
 
     @Override
-    int getPaidMonthlyForSalary() {
+    double getPaidMonthlyForSalary() {
         return 0;
     }
 }

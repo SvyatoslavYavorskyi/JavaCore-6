@@ -49,7 +49,7 @@ public class EUBank extends Bank {
     }
 
     @Override
-    int getPaidMonthlyForSalary() {
+    double getPaidMonthlyForSalary() {
         return 0;
     }
 }
