@@ -4,13 +4,13 @@ package module4;
  * Created by Свят on 19.02.2017.
  */
 public abstract class Bank {
-    private long id;
-    private String bankCountry;
-    private Currency currency;
-    private int numberOfEmployee;
-    private double avrSalaryOfEmployee;
-    private long rating;
-    private long totalCapital;
+     long id;
+     String bankCountry;
+     Currency currency;
+     int numberOfEmployee;
+     double avrSalaryOfEmployee;
+     long rating;
+     long totalCapital;
 
     public Bank(long id, String bankCountry, Currency currency, int numberOfEmployee, double avrSalaryOfEmployee, long rating, long totalCapital) {
         this.id = id;
@@ -21,6 +21,7 @@ public abstract class Bank {
         this.rating = rating;
         this.totalCapital = totalCapital;
     }
+
 
     public long getId() {
         return id;

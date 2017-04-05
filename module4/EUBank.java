@@ -10,46 +10,44 @@ public class EUBank extends Bank {
 
     @Override
     int getLimitOfWithdrawal() {
-        if (equals(Currency.USD)) {
-            return 2000;
-        }
-        return 2200;
+        if (currency == currency.USD) return 2000;
+        if (currency == currency.EU) return 2200;
+        else return 0;
     }
 
     @Override
     int getLimitOfFunding() {
-        if (equals(Currency.EUR)) {
-            return 20000;
-        }
-        return 10000;
+        if (currency == currency.EU) return 20000;
+        if (currency == currency.USD) return 10000;
+        else return 0;
     }
 
     @Override
     int getMonthlyRate() {
-        if (equals(Currency.USD)) {
-            return 0;
-        }
-        return 1;
+        if (currency == currency.EU) return 1;
+        else return 0;
     }
 
     @Override
     int getCommission(int summ) {
-        if (summ <= 1000 && equals(Currency.USD)) {
-            return 5;
+        if (currency == currency.USD) {
+            if (summ <= 1000) return 5;
+            if (summ > 1000) return 7;
         }
-        if (summ > 1000 && equals(Currency.USD)) {
-            return 7;
+        if (currency == currency.EU) {
+            if (summ <= 1000) return 2;
+            if (summ > 1000) return 4;
         }
-        if (summ <= 1000 && equals(Currency.EUR)) {
-            return 2;
-        }
-
-        return 4;
+        return 0;
 
     }
 
     @Override
     double getPaidMonthlyForSalary() {
-        return 0;
+        return numberOfEmployee * avrSalaryOfEmployee;
+    }
+
+    public String toString() {
+        return "ID:" + this.id + " и страна:" + this.bankCountry;
     }
 }

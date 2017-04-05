@@ -9,46 +9,44 @@ public  class ChinaBank extends Bank {
     }
 
     @Override
-    int getLimitOfWithdrawal() {
-        if (equals(Currency.USD)) {
-            return 100;
-        }
-        return 150;
+    int getLimitOfWithdrawal() {if (currency==currency.USD) return 100;
+        if (currency==currency.EU) return 150;
+        else return 0;
     }
 
     @Override
     int getLimitOfFunding() {
-        if (equals(Currency.EUR)) {
-            return 5000;
-        }
-        return 10000;
+        if (currency == currency.EU) return 5000;
+        if (currency==currency.USD) return 10000;
+        else return 0;
     }
 
     @Override
     int getMonthlyRate() {
-        if (equals(Currency.USD)) {
-            return 1;
+        if (currency==currency.USD) return 1;
+        else return 0;
         }
-        return 0;
-    }
+
+
 
     @Override
     int getCommission(int summ) {
-        if (summ <= 1000 && equals(Currency.USD)) {
-            return 3;
+        if (currency==currency.USD){
+            if (summ<=1000) return 3;
+            if (summ>1000) return 5;
         }
-        if (summ > 1000 && equals(Currency.USD)) {
-            return 5;
+        if (currency==currency.EU) {
+            if (summ<=1000) return 10;
+            if (summ>1000) return 11;
         }
-        if (summ <= 1000 && equals(Currency.EUR)) {
-            return 10;
-        }
-
-        return 11;
+        return 0;
     }
 
     @Override
     double getPaidMonthlyForSalary() {
-        return 0;
+        return numberOfEmployee*avrSalaryOfEmployee;
+    }
+    public String toString() {
+        return "ID:" + this.id + " и страна:" +this.bankCountry;
     }
 }

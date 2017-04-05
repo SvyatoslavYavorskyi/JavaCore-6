@@ -8,48 +8,67 @@ import static module4.Currency.USD;
  */
 public class Main {
     public static void main(String[] args) {
-        USBank americanExpress = new USBank(1, "hfs", USD, 122, 45355.34, 3553, 12340000);
-        EUBank kredoBank = new EUBank(2, "Polish", EUR, 123, 34667.43, 2000, 35000000);
-        ChinaBank chinaBank = new ChinaBank(12, "China", USD, 45, 56499, 1000, 4560000);
+        USBank usBank1 = new USBank(11111,"USA", Currency.USD, 150, 3510.50,10,2500000);
+        USBank usBank2 = new USBank(11112,"USA", Currency.EU, 100, 1250.50,25,1200000);
 
-        User user1 = new User(1, "Sasha", 8000, 10, "google", 10000, americanExpress);
-        User user2 = new User(2, "Kolya", 10000, 23, "Krogel", 20000, americanExpress);
-        User user3 = new User(3, "Sveta", 5000, 7, "Figure", 7000, kredoBank);
-        User user4 = new User(4, "Zhanna)", 15000, 17, "Vodafone", 180, kredoBank);
-        User user5 = new User(5, "Vassa", 2000, 40, "Shinomontazh", 5000, chinaBank);
-        User user6 = new User(6, "Stepan", 5000, 32, "Umbro", 30000, chinaBank);
+        EUBank euBank1 = new EUBank(22222, "France",Currency.USD, 85,2500.20,21,200000);
+        EUBank euBank2 = new EUBank(22221, "Ukraine",Currency.EU, 15,800.15,125,50000);
 
-        System.out.println(user1.getName() + "   " + BankSystem.withdrawOfUsers(user1, 1000));
-        System.out.println(BankSystem.fundUser(user1, 2000));
-        System.out.println(BankSystem.transferMoney(user1, user2, 2000));
-        System.out.println(BankSystem.paySalary(user1));
+        ChinaBank chinaBank1 = new ChinaBank(33333, "China",Currency.USD, 125,1500.10,145,615000);
+        ChinaBank chinaBank2 = new ChinaBank(33332, "India",Currency.EU, 58,505.50,145125,15000);
 
-        System.out.println(user2.getName() + "   " + BankSystem.paySalary(user2));
-        System.out.println(BankSystem.transferMoney(user2, user3, 5000));
-        System.out.println(BankSystem.fundUser(user2, 6000));
-        System.out.println(BankSystem.withdrawOfUsers(user2, 3000));
 
-        System.out.println(user3.getName() + "   " + BankSystem.paySalary(user3));
-        System.out.println(BankSystem.transferMoney(user3, user4, 6000));
-        System.out.println(BankSystem.fundUser(user3, 500));
-        System.out.println(BankSystem.withdrawOfUsers(user3, 1000));
 
-        System.out.println(user4.getName() + "   " + BankSystem.paySalary(user4));
-        System.out.println(BankSystem.transferMoney(user4, user5, 4500));
-        System.out.println(BankSystem.fundUser(user4, 1000));
-        System.out.println(BankSystem.withdrawOfUsers(user4, 10000));
+        User u1= new User(1001,"Vasya" ,10000,5,"Google", 2000, usBank1);
+        User u2= new User(1002,"Kolya" ,11000,4,"Yandex", 3000, usBank2);
+        User u3= new User(1003,"Petya" ,20100,8,"Goit", 5000, euBank1);
+        User u4= new User(1004,"Grisha" ,20000,9,"Zavod im.Lenina", 1000, euBank2);
+        User u5= new User(1005,"Tolya" ,15000,6,"Velyka kyshenya", 500, chinaBank1);
+        User u6= new User(1006,"Olya" ,6300,1,"Silpo", 2500, chinaBank2);
 
-        System.out.println(user5.getName() + "   " + BankSystem.paySalary(user5));
-        System.out.println(BankSystem.transferMoney(user5, user6, 7000));
-        System.out.println(BankSystem.fundUser(user5, 8000));
-        System.out.println(BankSystem.withdrawOfUsers(user5, 7700));
 
-        System.out.println(user6.getName() + "   " + BankSystem.paySalary(user6));
-        System.out.println(BankSystem.transferMoney(user6, user1, 5000));
-        System.out.println(BankSystem.fundUser(user6, 100));
-        System.out.println(BankSystem.withdrawOfUsers(user6, 44));
+        BankSystem system = new BankSystemImpl();
 
+        System.out.println(u1);
+        system.withdrawOfUsers(u1, 100);
+        system.fundUser(u1,500);
+        system.transferMoney(u1,u3,100);
+        system.paySalary(u1);
+        System.out.println();
+
+        System.out.println(u2);
+        system.withdrawOfUsers(u2, 1000);
+        system.fundUser(u2,50000);
+        system.transferMoney(u2,u4,1000);
+        system.paySalary(u2);
+        System.out.println();
+
+        System.out.println(u3);
+        system.withdrawOfUsers(u3, 10000);
+        system.fundUser(u3,500);
+        system.transferMoney(u3,u5,100);
+        system.paySalary(u3);
+        System.out.println();
+
+        System.out.println(u4);
+        system.withdrawOfUsers(u4, 200);
+        system.fundUser(u3,5600);
+        system.transferMoney(u4,u5,1000);
+        system.paySalary(u4);
+        System.out.println();
+
+        System.out.println(u5);
+        system.withdrawOfUsers(u5, 1256);
+        system.fundUser(u5,6520);
+        system.transferMoney(u5,u1,1250);
+        system.paySalary(u5);
+        System.out.println();
+
+        System.out.println(u6);
+        system.withdrawOfUsers(u6, 256);
+        system.fundUser(u6,500);
+        system.transferMoney(u6,u4,2500);
+        system.paySalary(u6);
 
     }
-
 }

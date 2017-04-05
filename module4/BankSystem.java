@@ -9,33 +9,11 @@ public interface  BankSystem {
 
 
 
-    static double withdrawOfUsers(User user, int amount){
-        double a=  user.getBalance() - amount;
+    void withdrawOfUsers(User user, int amount);
 
-         if (a<0){
-            return 0;
-         }
+    void fundUser(User user, int amount);
 
-         return a;
-    }
+    void  transferMoney(User fromUser, User toUser, int amount);
 
-    static double fundUser(User user, int amount){
-        double a;
-        a=user.getBalance()+amount;
-        return a ;
-    }
-
-    static String transferMoney(User fromUser, User toUser, int amount){
-        double a ;
-        double b;
-        a=fromUser.getBalance()-amount;
-        b=toUser.getBalance()+amount;
-        return "Successfully";
-    }
-
-    static double paySalary (User user){
-        double a;
-        a=user.getBalance()+user.getSalary();
-        return a;
-    }
+    void paySalary (User user);
 }

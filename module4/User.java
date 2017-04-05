@@ -35,6 +35,8 @@ public class User {
         this.bank = bank;
     }
 
+
+
     public long getId() {
         return id;
     }
